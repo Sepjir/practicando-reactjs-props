@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Comentario from './components/Comentario';
+import Saludo from './components/Saludo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container mt-5'>
+      <h1>Proyecto desde cero</h1>
+      <Saludo persona='Ignacio' edad={30}/>
+      <Saludo persona='Pedrito' edad={25}/>
+      <Saludo persona='Juanito' edad={27}/>
+      <hr/>
+      <h3>Caja de comentarios</h3>
+      <Comentario
+        urlImagen='https://picsum.photos/50'
+        persona='Ignacio'
+        texto='holi aaaaaaaaaaaaaaa'
+      />
+      <Comentario
+        urlImagen='https://picsum.photos/70'
+        persona='Pedrito'
+        texto='holi wwwwwwwwwwww'
+      />
+      <Comentario
+        urlImagen='https://picsum.photos/64'
+        persona='Juanito'
+        texto='holi fffffffffffff'
+      />
+      <Comentario/>
     </div>
   );
 }
